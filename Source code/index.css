@@ -526,22 +526,45 @@ body{
   margin-bottom: 10px;
 }
 
-.hero-content .breadcrumb {
+.hero-content .breadcrumb .text-breadcrumb {
   font-size: 1rem;
-  align-items: center;
+  text-align: center;
 }
 
 .hero-content .breadcrumb a {
   color: #00A9E0; /* Orange link like in your image */
   text-decoration: none;
   font-weight: bold;
-  align-items: center;
+  text-align: center;
 }
 
 .hero-content .breadcrumb span {
   margin: 0 8px;
+  text-align: center;
   color: #fff;
 }
+.text-breadcrumb {
+  text-align: center; /* default center on mobile */
+}
+
+.text-breadcrumb a {
+  text-decoration: none;
+  color: #00A9E0; /* Dell Blue */
+  font-weight: 500;
+}
+
+.text-breadcrumb span {
+  margin: 0 5px;
+  color: #8ac73e; /* Acer Green */
+}
+
+/* On tablet & desktop reset to left */
+@media (min-width: 768px) {
+  .text-breadcrumb {
+    text-align: left;
+  }
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
