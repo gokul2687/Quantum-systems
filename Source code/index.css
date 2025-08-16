@@ -459,6 +459,16 @@ body{
   margin-bottom: 6px;
   color: #333;
 }
+/* Services alignment fix for mobile */
+.footer-services {
+  text-align: center;  /* Center align on mobile */
+}
+
+@media (min-width: 768px) {
+  .footer-services {
+    text-align: left;  /* Reset to left align on tablets & desktops */
+  }
+}
 
 /* Responsive spacing */
 #footer p, #footer li {
