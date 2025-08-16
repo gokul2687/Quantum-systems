@@ -7,7 +7,26 @@
     event.target.classList.add('active');
   }
 
- 
+ function showSection(sectionId) {
+  // Hide all tab contents
+  document.querySelectorAll(".tab-content-wrapper").forEach(el => {
+    el.classList.add("d-none");
+  });
+
+  // Remove active state from buttons
+  document.querySelectorAll(".btn-service").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  // Show the selected section
+  document.getElementById(sectionId).classList.remove("d-none");
+
+  // Highlight the clicked button
+  event.target.classList.add("active");
+
+  // Ensure layout updates (scroll fix)
+  window.dispatchEvent(new Event('resize'));
+}
   function showGroup(num) {
     const groups = document.querySelectorAll('.testimonial-group');
     groups.forEach((group, i) => {

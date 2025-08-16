@@ -58,6 +58,7 @@ body{
 /* Ensure the carousel takes up 70% of the viewport height */
 .carousel-item {
   height: 89vh; 
+  transition: opacity 1s ease-in-out;
   position: relative;/* Set the height of the carousel to 70% of the viewport height */
   object-fit: cover; /* Make sure the video/image covers the full container */
 }
@@ -183,6 +184,13 @@ body{
 .btn-service:hover {
   background-color: #8ac73e;
   color: #fff;
+}
+.tab-content-wrapper {
+  display: none;
+}
+.tab-content-wrapper:not(.d-none) {
+  display: flex !important;
+  flex-wrap: wrap;
 }
 
 /* Service Cards */
