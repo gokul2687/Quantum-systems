@@ -1,0 +1,601 @@
+/* Nav bar styles */
+body{
+    margin: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+ /* White hamburger icon */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar .container-fluid {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.navbar-nav .nav-link {
+  color: black !important;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00AEF0 !important;
+}
+.navbar-brand img {
+  max-width: 250px;
+}
+
+@media (max-width: 768px) { /* Tablets and smaller */
+  .navbar-brand img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile phones */
+  .navbar-brand img {
+    max-width: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar {
+    height: 85px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-brand img {
+    max-height: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    line-height: 60px; /* vertically center text */
+  }
+}
+.gradient-green {
+  background: whitesmoke;
+
+}
+/* Home page style */
+
+/* Ensure the carousel takes up 70% of the viewport height */
+.carousel-item {
+  height: 89vh; 
+  position: relative;/* Set the height of the carousel to 70% of the viewport height */
+  object-fit: cover; /* Make sure the video/image covers the full container */
+}
+
+/* Add background blur to the carousel */
+.carousel-item video {
+  filter: blur(10px); /* Apply blur effect to the video */
+  -webkit-filter: blur(10px); /* For Safari support */
+  height: 100%; /* Ensure video fills the container */
+  object-fit: cover; /* Ensure it maintains aspect ratio */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Place video below the text */
+}
+
+/* Add opacity to the background for better text visibility */
+.carousel-item::before {
+  content: ''; /* Empty content to create overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay with 60% opacity */
+  z-index: 1; /* Overlay above the video but below the text */
+}
+/* Center the caption text */
+.carousel-caption {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 2;
+  color: #A7D08E;
+  text-align: center;
+  
+}
+
+.carousel-caption h1 {
+  font-size: 3rem;
+  color: #00A9E0;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  color: #A7D08E;
+}
+
+/* Responsive text adjustments */
+@media (max-width: 991px) {
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+ .carousel-caption {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  z-index: 2;
+  color: #A7D08E;
+  text-align: center;
+  
+}
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) 
+{
+   .carousel-caption h1 {
+    font-size: 1rem;
+  }
+   .carousel-caption {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  z-index: 2;
+  color: #A7D08E;
+  text-align: center;
+  
+}
+  .carousel-caption p {
+    font-size: 0.95rem;
+  }
+
+  .carousel-item {
+    height: 60vh;
+  }
+}
+.carousel-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 576px),
+       (min-width: 1400px) {
+  .carousel-img {
+    height: 100vh !important;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Services page styles */
+.text-acer {
+  color: #8ac73e;
+}
+
+/* Tab Buttons */
+.btn-service {
+  background-color: transparent;
+  border: 2px solid #8ac73e;
+  color: #8ac73e;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 500;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-service.active,
+.btn-service:hover {
+  background-color: #8ac73e;
+  color: #fff;
+}
+
+/* Service Cards */
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.service-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-body {
+  padding: 20px;
+}
+
+.service-body h5 {
+  color: #00A9E0;
+}
+
+.service-body p {
+  font-size: 14px;
+  color: #555;
+}
+
+.service-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8ac73e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.service-link:hover {
+  color: #00A9E0;
+}
+
+  /* our client styles */
+
+#client-page {
+  padding: 40px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+#client-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #4CAF50;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(200%); /* Enough to loop smoothly */
+  animation: scroll 40s linear infinite;
+}
+
+.client-box {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 100px;
+  margin: 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client-box img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* testimonals */
+.testimonial{
+  text-align: center;
+  padding: 20px;
+  /* background-color: #f9fff3; */
+  border-radius: 12px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); */
+  width: 300px;
+  gap: 20px;
+  min-height: 360px;
+}
+
+.testimonial h6 {
+  font-weight: bold;
+  margin-top: 15px;
+}
+#review-btn
+{
+  border: 1px solid #00A9E0;
+  background-color: #00A9E0;
+  color: white;
+}
+#review-btn:hover
+{
+  background-color: white;
+  color: #00A9E0;
+}
+.avatar
+{
+  background-color: #00A9E0;
+}
+.testimonial-icon
+{
+  color: #00A9E0;
+}
+/* about style */
+#about-heading
+{
+  font-weight: bold;
+  color: #00AEF0;
+}
+.square-box {
+  width: 100%;
+  max-width: 600px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.square-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.icon-circle {
+  background-color: #8ac73e; /* Acer Green */
+  padding: 12px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-circle i {
+  color: #ffffff; /* White icon */
+}
+.text-acer
+{
+  color: #8ac73e;
+}
+/* why choose us */
+
+#why {
+  color: #00a9e0; /* Dell Blue */
+}
+#why-choose-us
+{
+  background-color: whitesmoke;
+}
+.choose-box {
+  position: relative;
+  background: #00A9E0; /* Dell Blue */
+  border-radius: 8px;
+  padding: 40px 20px 30px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: none;
+}
+
+/* Folder tab effect */
+.choose-box::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 100px;
+  height: 30px;
+  background-color: #8ac73e; /* Acer Green */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  z-index: 1;
+}
+
+.choose-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 169, 224, 0.2);
+  border-top-color: #00a9e0; /* Dell Blue */
+}
+
+.choose-box h6 {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+/* contact styles */
+#Contactcontent
+{
+    /* min-height: 100vh; */
+    background-color:#ccf3ff;
+}
+   .form-container input,
+   .form-container textarea {
+     border: 2px solid #00A9E0;
+   }
+
+   .form-container input:focus,
+   .form-container textarea:focus {
+     border-color: #00A9E0; 
+     box-shadow: none; /* Remove focus shadow */
+   }
+.map-container iframe
+ {
+     width: 100%; /* Full width for responsiveness */
+     height: 560px; 
+     border: 0; /* No border */
+  }
+  .btn-acer
+  {
+    background-color: #00A9E0;
+    color: white;
+    border: none;
+    height: 40px;
+  }
+  /* footer styles */
+  #footer
+  {
+    background-color: whitesmoke;
+  }
+  /* Acer Green and Dell Blue Theme */
+.text-acer {
+  color: #8ac73e;
+}
+
+.bg-acer {
+  background-color: #8ac73e !important;
+}
+
+.bg-dell {
+  background-color: #00A9E0 !important;
+}
+
+#footer ul li {
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* Responsive spacing */
+#footer p, #footer li {
+  font-size: 14px;
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease-in-out;
+}
+.whatsapp-float img {
+  width: 50px;
+  height: 50px;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+/* salestab */
+/* Hero Banner Styling */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: url('../Asserts/page-title.jpg') center/cover no-repeat; /* Change to your image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 0 15px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-content .breadcrumb {
+  font-size: 1rem;
+  align-items: center;
+}
+
+.hero-content .breadcrumb a {
+  color: #00A9E0; /* Orange link like in your image */
+  text-decoration: none;
+  font-weight: bold;
+  align-items: center;
+}
+
+.hero-content .breadcrumb span {
+  margin: 0 8px;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 220px;
+  }
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content .breadcrumb {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner {
+    height: 180px;
+  }
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+}
+/* Section Title */
+.section-title {
+  font-weight: 700;
+  color: #00a9e0; /* Dell Blue */
+}
+
+.section-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+}
+
+/* Laptop Type Cards */
+.type-card {
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.type-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.type-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Acer Green & Dell Blue Styles */
+.acer-green {
+  background-color: #8ac73e;
+}
+
+.dell-blue {
+  background-color: #00a9e0;
+}
+
+/* Hover Effects */
+.type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .type-card {
+    text-align: center;
+  }
+}
