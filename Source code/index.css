@@ -264,7 +264,11 @@ body{
   width: calc(200%); /* Enough to loop smoothly */
   animation: scroll 10s linear infinite;
 }
-
+@media (max-width: 768px) {
+  .slider-track {
+    animation-duration: 5s; /* Reduce time = increase speed */
+  }
+}
 .client-box {
   flex: 0 0 auto;
   width: 300px;
