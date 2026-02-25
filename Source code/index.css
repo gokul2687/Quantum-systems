@@ -266,7 +266,7 @@ body{
 }
 @media (max-width: 768px) {
   .slider-track {
-    animation-duration: 4s; /* Reduce time = increase speed */
+    animation-duration: 4   s; /* Reduce time = increase speed */
   }
 }
 .client-box {
